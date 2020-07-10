@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>web-dev course Assignment2</title>
+	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css">
+ 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<!--<link rel="stylesheet" type="text/css" href="css/style.css">-->
+</head>
+<body>		
+
+
+
+	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+		<div class="container">
+			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsiableNavbar"><span class="navbar-toggler-icon"></span></button>
+		</div>
+		<div class="navbar-collapse collapse" id="collapsiableNavbar">
+			<ul class="nav nav-tabs">
+				<li>
+					<a class="navbar-brand" href="#">Gallery</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Info</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">About</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#">Contact</a>
+				</li>
+				<li class="nav-item dropdown">
+  		      		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+         			 categories	
+       	 			</a>
+        			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
+          				<a class="dropdown-item" href="#">Animals</a>
+          				<a class="dropdown-item" href="#">Birds</a>
+        				<a class="dropdown-item" href="#">aquatic</a>
+      				</div>
+    	 	    </li>
+				
+				<li class="nav-item">
+					<input type="text" >
+					<button type="submit" class="btn btn-primary"><span class="fa fa-search"></span> Search</button>
+				</li>
+			
+		</ul>
+	</div>
+		
+		
+	</nav>
+
+	<div class="container">
+		<div>
+			<h1>This is an image gallery! Here are some of the images...</h1>
+			<div class="row">
+				<div class="col-md-3">
+					<img src="images/cat.webp" class="w-100" alt="cat">
+					<p class="bg-secondary">Victoria, a young white cat, is dropped in the streets of London by her owner in the middle of the night. The alley cats witnessing this introduce themselves to her as the "Jellicles". Two toms, meek magician Mr. Mistoffelees who develops a crush on Victoria and the loyal Munkustrap, and two queens, the snooty Cassandra and Demeter, take Victoria under their wing and show her the world of the Jellicles as they hype up the Jellicle Ball, an annual ceremony where cats compete for the chance to go to the Heaviside Layer and be granted a new life.</p>
+				</div>
+				<div class="col-md-3 ">
+					<img src="images/cycling.webp"  class="w-100" alt="cycling">
+					<p class="bg-danger">In addition, cycling provides a variety of health benefits. The World Health Organization (WHO) states that cycling can reduce the risk of cancers, heart disease, and diabetes that are prevalent in sedentary lifestyles.[9] Cycling on stationary bikes have also been used as part of rehabilitation for lower limb injuries, particularly after hip surgery.[10] Individuals who cycle regularly have also reported mental health improvements, including less perceived stress and better vitality</p>
+				</div>
+				<div class="col-md-3">
+					<img src="images/puppy.webp"  class="w-100" alt="puppy">
+					<p class="bg-secondary">The dog (Canis familiaris when considered a distinct species or Canis lupus familiaris when considered a subspecies of the wolf)[5] is a domesticated carnivore of the family Canidae. It is part of the wolf-like canids,[6] and is the most widely abundant terrestrial carnivore.[7][8][9][10][11] The dog and the extant gray wolf are sister taxa[12][13][14] as modern wolves are not closely related to the wolves that were first domesticated,[13][14] which implies that the direct ancestor of the dog is extinct.[15] The dog was the first species to be domesticated,[14][16] and has been selectively bred over millennia for various behaviors, sensory capabilities, and physical attributes.[17]</p>
+				</div>
+				<div class="col-md-3">
+					<img src="images/tulips.webp"  class="w-100" alt="tulips">
+					<p class="bg-danger">Tulips (Tulipa) form a genus of spring-blooming perennial herbaceous bulbiferous geophytes (having bulbs as storage organs). The flowers are usually large, showy and brightly colored, generally red, pink, yellow, or white (usually in warm colors). They often have a different colored blotch at the base of the tepals (petals and sepals, collectively), internally. Because of a degree of variability within the populations, and a long history of cultivation, classification has been complex and controversial.</p>
+				</div>
+			</div>
+			
+		</div>
+	</div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-md-4 ">
+				<ul class="nav flex-column bg-dark">
+					<li class="nav-item">
+						<a class="nav-link text-info" href="">Help</a>	
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="">About</a>
+					</li>
+					<li class="nav-item">
+						<a class="nav-link" href="">contact</a>
+					</li>
+				</ul>
+			</div>
+			<div class="col-md-4">
+				<h2>Red-ibis</h2>
+				<p>The scarlet ibis (Eudocimus ruber) is a species of ibis in the bird family Threskiornithidae. It inhabits tropical South America and islands of the Caribbean. In form it resembles most of the other twenty-seven extant species of ibis, but its remarkably brilliant scarlet coloration makes it unmistakable. It is one of the two national birds of Trinidad and Tobago.</p>
+				<img src="images/red-ibis.webp" class="w-100" alt="Red-ibis">
+			</div>
+			<div class="col-md-4">
+				<h2 class="text-success">Login Form</h2>
+				<form action="#">
+					<div class="form-group">
+						<label for="email">Email</label>
+						<input type="email" name="email" class="form-control">
+					</div>
+					<div class="form-group">
+						<label for="password">Password</label>
+						<input type="password" name="password" class="form-control">
+					</div>
+					<button class="btn btn-success">Login</button>
+				</form>
+			</div>
+		</div>
+		
+	</div>
+
+</body>
+</html>
