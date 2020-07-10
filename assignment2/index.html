@@ -11,54 +11,53 @@
 </head>
 <body>		
 
+	<nav class="navbar navbar-expand-md bg-dark navbar-dark">
+		<a class="navbar-brand" href="#">Gallery</a>
+		<!--toggler collapsible button-->
+		<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+			<span class="navbar-toggler-icon"></span>
+		</button>
 
+  		<!-- Navbar Links -->
+  		<div class="collapse navbar-collapse" id="collapsibleNavbar">
+  			<ul class="navbar-nav ">
 
-	<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-		<div class="container">
-			<button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsiableNavbar"><span class="navbar-toggler-icon"></span></button>
-		</div>
-		<div class="navbar-collapse collapse" id="collapsiableNavbar">
-			<ul class="nav nav-tabs">
-				<li>
-					<a class="navbar-brand" href="#">Gallery</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Home</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Info</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">About</a>
-				</li>
-				<li class="nav-item">
-					<a class="nav-link" href="#">Contact</a>
-				</li>
-				<li class="nav-item dropdown">
-  		      		<a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-         			 categories	
-       	 			</a>
-        			<div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-          				<a class="dropdown-item" href="#">Animals</a>
-          				<a class="dropdown-item" href="#">Birds</a>
-        				<a class="dropdown-item" href="#">aquatic</a>
+   		    	<li class="nav-item">
+     				<a class="nav-link" href="#">Home</a>
+    			</li>
+    			<li class="nav-item">
+     				<a class="nav-link" href="#">Info</a>
+    			</li>
+    			<li class="nav-item">
+     				<a class="nav-link" href="#">About</a>
+    			</li>
+
+    			<!--navbar with dropdown-->
+    			<li class="nav-item dropdown">
+     				<a class="nav-link dropdown-toggle" href="#" id="navbardrop" data-toggle="dropdown">
+       				 Categories
+    				</a>
+    			    <div class="dropdown-menu">
+       					<a class="dropdown-item" href="#">Animals</a>
+        				<a class="dropdown-item" href="#">Birds</a>
+       					<a class="dropdown-item" href="#">Aquatic</a>
       				</div>
-    	 	    </li>
-				
-				<li class="nav-item">
-					<input type="text" >
-					<button type="submit" class="btn btn-primary"><span class="fa fa-search"></span> Search</button>
-				</li>
-			
-		</ul>
-	</div>
-		
-		
+  				</li>
+
+  				<!--search tab-->
+  				<form class="form-inline" action="#">
+   					 <input class="form-control mr-sm-2" type="text" placeholder="Search">
+   					 <button class="btn btn-success" type="submit"><span class="fa fa-search"></span> Search</button>
+ 				</form>
+
+  			</ul>
+  		</div>
 	</nav>
+	
 
 	<div class="container">
 		<div>
-			<h1>This is an image gallery! Here are some of the images...</h1>
+			<h1>This is an <span class="text-danger">Image Gallery!</span> Here are some of the images...</h1>
 			<div class="row">
 				<div class="col-md-3">
 					<img src="images/cat.webp" class="w-100" alt="cat">
