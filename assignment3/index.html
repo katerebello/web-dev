@@ -14,6 +14,8 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css/style.css">
 	<title>Javascript</title>
 
 </head>
@@ -22,8 +24,8 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-md-6">
-				<h3>submit the time interval between the two images</h3>
-				<input type="text" id="gettime" placeholder="enter time" name="time">
+				<h3>Submit the time interval and a slideshow wil appear:</h3>
+				<input type="text" id="settime" placeholder="enter time" name="time">
 				<button id="btntime" type="btn btn-success" onclick="displayslideshow();">submit</button>
 				<br>
 
@@ -31,7 +33,7 @@
 				<div id="demo"></div>
 			</div>
 			<div class="col-md-6" id="showslideshow"  style="display: none">
-				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+				<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel" data-interval="500">
 					<ol class="carousel-indicators">
     					<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
    						<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
@@ -65,20 +67,39 @@
 			</div><!--end of other half of grid-->
 		</div>
 		<br>
+
+		<div class="container">
+			
+		</div>
 		<!--caculator-->
 		<h3>Calculator:</h3>
-		<div class="row">
-			<div class="col-md-4">
-				<input type="text" name="num1">
+		Enter First no.
+		<input type="text" id="num1" name="num1">
+		<br><br>
+		<div id="operator">
+			
+		</div>
+		Enter Second no.
+		<input type="text" id="num2" name="num2">
+		<br><br>
+		<div class="row ">
+			<div class="col-md-2 col-xs-1">
+				<button class="btn btn-primary getop" value="+" onclick="printop(this.value);">Add</button>
 			</div>
-			<div class="col-md-4">
-				<input type="text" name="num2">
+			<div class="col-md-2 col-xs-1">
+				<button  class="btn btn-primary getop" value="-" onclick="printop(this.value);">Subtract</button>
 			</div>
-			<div class="col-md-4">
-				=&nbsp&nbsp
-				<input type="text" name="ans">
+			<div class="col-md-2 col-xs-1">
+				<button  class="btn btn-primary getop" value="/"  onclick="printop(this.value);">divide</button>
+			</div>
+			<div class="col-md-2 col-xs-1">
+				<button  class="btn btn-primary getop" value="*" onclick="printop(this.value);">multiply</button>
 			</div>
 		</div>
+		<br><br>
+		Answer:<h3 class="bg-danger"id="ans"></h3>
+		
+		
 		<!--end of calculator-->
 
 		<br>
@@ -91,9 +112,11 @@
 	<script type="text/javascript">
 		//time = Number(document.getElementById("getime").value)
 		//document.getElementById("btntime")
+
 		function displayslideshow(){
 			document.getElementById('showslideshow').style.display='block';
-			var time = (document.getElementById("gettime").value);
+			console.log(parseInt(document.getElementById('settime').value));
+			var time = document.getElementById("settime").value ;
 
 			if(time.length==0){
 				document.getElementById("demo").innerHTML="Invalid input.Enter time in seconds";
@@ -107,6 +130,27 @@
 
 		function changebg(){
 			document.getElementById('email').style.backgroundColor = "red" ;
+		}
+
+		function printop(operator){
+			document.getElementById("operator").innerHTML = operator;
+			if(operator == '+'){
+				var ans = parseInt(document.getElementById("num1").value)+parseInt(document.getElementById("num2").value)
+				document.getElementById("ans").innerHTML = ans;
+			}
+			if(operator== '-'){
+				var ans1 = parseInt(document.getElementById("num1").value)-parseInt(document.getElementById("num2").value)
+				document.getElementById("ans").innerHTML = ans1;
+			}
+			if(operator== '/'){
+				var ans = parseInt(document.getElementById("num1").value)/parseInt(document.getElementById("num2").value)
+				document.getElementById("ans").innerHTML = ans;
+			}
+			if(operator== '*'){
+				var ans = parseInt(document.getElementById("num1").value)*parseInt(document.getElementById("num2").value)
+				document.getElementById("ans").innerHTML = ans;
+			}
+			
 		}
 	</script>
 
