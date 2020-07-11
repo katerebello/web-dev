@@ -1,1 +1,31 @@
+body {
+	background-repeat: no-repeat;
+  background-color: black;
+  
+}
+#bg1 {
+	background-image: url("../images/cycling.webp");
+	background-repeat: no-repeat;
+}
+.parallax {
+  /* The image used */
+  background: linear-gradient(to bottom, #33ccff 0%, #ff99cc 100%);
 
+  /* Set a specific height */
+  min-height: 500px; 
+
+  /* Create the parallax scrolling effect */
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#login{
+	background-image: url(../images/login2.jpg);
+  max-width: 100%;
+}
+
+.font1{
+  font-family: 'Oleo Script', cursive;
+}
