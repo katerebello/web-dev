@@ -14,17 +14,20 @@
 
 	<!-- Latest compiled JavaScript -->
 	<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js"></script>
-
+	
+	<!--external css file-->
 	<link rel="stylesheet" type="text/css" href="css/style.css">
+	<!--include external js file-->
+	<script type="text/javascript" src="js/script.js"></script>
 	<title>Javascript</title>
 
 </head>
 <body>
 	<br>
-	<div class="container">
+	<div class="container text-light">
 		<div class="row">
 			<div class="col-md-6">
-				<h3>Submit the time interval and a slideshow wil appear:</h3>
+				<h3>Submit the time interval and a slideshow will appear:</h3>
 				<input type="text" id="settime" placeholder="enter time" name="time">
 				<button id="btntime" type="btn btn-success" onclick="displayslideshow();">submit</button>
 				<br>
@@ -132,56 +135,13 @@
 		<!--<div class="row">
 			<input type="email" name="email" placeholder="enter email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$" onfocus="changebg();" id="email">
 		</div>-->
-  			E-mail: <input type="email" id="myEmail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
-  			<input type="submit">
+
+  			<div >E-mail:</div>
+  			 <input type="email" onchange="color(this.value)" id="k" class="myEmail" name="email" pattern="[a-z0-9._%+-]+@[a-z0-9.-]+\.[a-z]{2,3}$">
+  			<br><br>
 	
 	</div>
 
-	<script type="text/javascript">
-		//time = Number(document.getElementById("getime").value)
-		//document.getElementById("btntime")
-
-		function displayslideshow(){
-			document.getElementById('showslideshow').style.display='block';
-			console.log(parseInt(document.getElementById('settime').value));
-			var time = document.getElementById("settime").value ;
-
-			if(time.length==0){
-				document.getElementById("demo").innerHTML="Invalid input.Enter time in seconds";
-			}
-			/*else{
-				time=parseInt(time)
-				document.getElementById("demo").innerHTML=time;
-			}*/
-			
-		}
-
-/*		function changebg(){
-
-			document.getElementById('email').style.backgroundColor = "red" ;
-		}*/
-
-		function printop(operator){
-			document.getElementById("operator").innerHTML = operator;
-			if(operator == '+'){
-				var ans = parseInt(document.getElementById("num1").value)+parseInt(document.getElementById("num2").value)
-				document.getElementById("ans").innerHTML = ans;
-			}
-			if(operator== '-'){
-				var ans1 = parseInt(document.getElementById("num1").value)-parseInt(document.getElementById("num2").value)
-				document.getElementById("ans").innerHTML = ans1;
-			}
-			if(operator== '/'){
-				var ans = parseInt(document.getElementById("num1").value)/parseInt(document.getElementById("num2").value)
-				document.getElementById("ans").innerHTML = ans;
-			}
-			if(operator== '*'){
-				var ans = parseInt(document.getElementById("num1").value)*parseInt(document.getElementById("num2").value)
-				document.getElementById("ans").innerHTML = ans;
-			}
-			
-		}
-	</script>
 
 </body>
 </html>
