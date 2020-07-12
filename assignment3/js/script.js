@@ -48,11 +48,11 @@
 		
 			if (emailPattern.test(email)){
 				//console.log(emailPattern.test(email));
-				document.getElementById("k").style.color = "blue";
+				document.getElementById("k").style.backgroundColor = "green";
 					
 			}
 			else{
-				console.log(emailPattern.test(email));
+				//console.log(emailPattern.test(email));
 				document.getElementById("k").style.backgroundColor = "red";
 			}
 		
