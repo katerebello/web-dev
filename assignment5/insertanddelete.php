@@ -26,7 +26,7 @@ if(mysqli_query($conn, $sql)){
 else{
 	echo "Error:" . $sql ."<br>" . mysqli_error($conn);
 }
-/*
+
 //query for deleting a row from the table named product
 $sql = "DELETE from product WHERE ProductName =  'refrigerator' ";
 if(mysqli_query($conn, $sql)){
